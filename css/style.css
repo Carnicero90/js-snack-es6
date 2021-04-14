@@ -5,10 +5,15 @@
 
 /* MACRO LAYOUT
    ======================= */
+   header {
+      padding-top: 25px;
+      padding-bottom: 25px;
+   }
    section {
+      padding: 10px;
       background-color: lightsalmon;
       min-width: 40%;
-      margin-right: 30px;
+      margin: 15px;
    }
    /* ======================= */
    
@@ -16,11 +21,13 @@
       ======================= */
    /* header
       ++++++++++ */
-      .logo-container {
-         position: relative;
-      }
+   .logo-container {
+      position: relative;
+   }
    .logo {
       width: 200px;
+      background-color: aquamarine;
+      box-shadow: 5px 5px 5px rgb(98, 132, 223);
    }
    [class*='-wheel'] {
      font-size: 100px;
@@ -30,7 +37,6 @@
       animation-timing-function: linear;
       animation-duration: 2s;
       animation-iteration-count: infinite;
-      z-index: 100;
       /* test */
       text-align: center;
       background-color:lightcyan;
@@ -47,8 +53,18 @@
          transform: rotate(360deg);
       }
    }
+
+   h1 {
+      padding-top: 15px;
+   }
+   header p {
+      padding: 10px 40px;
+      border-bottom: 1px solid grey;
+   }
    /* ++++++++++ */
-   
+
+   /* main
+   ++++++++++ */
    
    ol {
       width: max-content
@@ -57,7 +73,7 @@
       background: goldenrod;
    }
    li {
-      padding: 5px;
+      padding: 10px;
    }
    
    ol li:nth-of-type(2) {
@@ -73,6 +89,7 @@
       background: lightsalmon;
       color: white;
    }
+   /* ++++++++++ */
    /* ======================= */
    
    /* template

@@ -104,7 +104,7 @@ for (let i of updatedStats) {
   rankList += `<li>${i.nome_squadra}: ${i.falli_subiti}</li>`;
 
 }
-RANK.innerHTML = rankList;
+RANKS.innerHTML = rankList;
 
 
 // FUNCTIONS
