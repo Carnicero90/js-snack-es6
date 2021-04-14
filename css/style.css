@@ -40,7 +40,7 @@
       left: -16px;
    }
    .right-wheel {
-      right: -4px;
+      right: -8px;
    }
    @keyframes spin {
       100% {
