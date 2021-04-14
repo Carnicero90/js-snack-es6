@@ -1,6 +1,8 @@
 /* COMMON
    ======================= */
-
+body {
+   font-family: monospace;
+}
 /* ======================= */
 
 /* MACRO LAYOUT
@@ -10,8 +12,8 @@
       padding-bottom: 25px;
    }
    section {
-      padding: 10px;
-      background-color: lightsalmon;
+      padding: 30px;
+      background-color: lightcyan;
       min-width: 40%;
       margin: 15px;
    }
@@ -34,11 +36,9 @@
       position: absolute;
       bottom: -8px;
       animation-name: spin;
-      animation-timing-function: linear;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-      /* test */
-      text-align: center;
+      animation-timing-function: ease-out;
+      animation-duration: 5s;
+      animation-iteration-count: 1;
       background-color:lightcyan;
    
    }
@@ -50,7 +50,7 @@
    }
    @keyframes spin {
       100% {
-         transform: rotate(360deg);
+         transform: rotate(720deg);
       }
    }
 
@@ -65,15 +65,25 @@
 
    /* main
    ++++++++++ */
+   #lightest-bike em {
+      background-color:rgba(98, 132, 223, 0.6);
+      padding-left: 5px;
+      padding-right: 5px;
+   }
    
    ol {
-      width: max-content
+      width: max-content;
+      background-color: white;
+      margin-top: 10px;
+      border: 2px solid grey;
    }
    ol li:nth-of-type(1) {
       background: goldenrod;
    }
    li {
       padding: 10px;
+      padding-right: 20px;
+      border-bottom: 1px solid lightgray;
    }
    
    ol li:nth-of-type(2) {
@@ -82,12 +92,6 @@
    
    ol li:nth-of-type(3) {
       background: #b87333;
-   }
-   
-   h3 {
-      padding: 5px 10px;
-      background: lightsalmon;
-      color: white;
    }
    /* ++++++++++ */
    /* ======================= */

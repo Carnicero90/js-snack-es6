@@ -1,20 +1,18 @@
-// Scusate ma oggi pomeriggio sono un poco incasinato, non so quando riesco a riordinare, semplificare, migliorare, etceterare da questo primo commit
-
 // ESERCIZIO BICICLETTE
-const bikeHtml = document.getElementById('lightest-bike');
+const BIKE = document.getElementById('lightest-bike');
 const biciclette = [{
-  nome: "olmo",
+  nome: 'Olmo Cybertruck46',
   peso: 43
 }, {
-  nome: "ducati",
+  nome: 'Ducati LittleMonster',
   peso: 23
 },
 {
-  nome: "truck",
+  nome: 'Predator Racer W+',
   peso: 12
 },
 {
-  nome: "graziella",
+  nome: 'Graziella Bella',
   peso: 35
 },
 ]
@@ -29,79 +27,79 @@ let lightestBike = biciclette[0];
 let { nome, peso } = lightestBike;
 
 // PRINT nome, peso INTO index.html
-bikeHtml.innerHTML = `${nome}, con un peso di ${peso}kg.`;
+BIKE.innerHTML = `<em>${nome}</em>, con un peso complessivo di ${peso}kg (campanello escluso).`;
 
 
 // ESERCIZIO SQUADRE CALCIO
-const RANKS = document.getElementById('scores');
+const RANKS = document.getElementById('ranks');
 const statsSquadre = [
   {
-    "nome_squadra": 'Milan',
-    "punti_fatti": 0,
-    "falli_subiti": 0,
+    nomeSquadra: 'Milan',
+    puntiFatti: 0,
+    falliSubiti: 0,
   }, {
-    "nome_squadra": 'Genoa',
-    "punti_fatti": 0,
-    "falli_subiti": 0,
+    nomeSquadra: 'Genoa',
+    puntiFatti: 0,
+    falliSubiti: 0,
   }, {
-    "nome_squadra": 'Guaranito',
-    "punti_fatti": 0,
-    "falli_subiti": 0,
+    nomeSquadra: 'Guaranito',
+    puntiFatti: 0,
+    falliSubiti: 0,
   },
   {
-    "nome_squadra": 'Ascoli',
-    "punti_fatti": 0,
-    "falli_subiti": 0,
+    nomeSquadra: 'Ascoli',
+    puntiFatti: 0,
+    falliSubiti: 0,
   },
   {
-    "nome_squadra": 'Brescia',
-    "punti_fatti": 0,
-    "falli_subiti": 0,
+    nomeSquadra: 'Brescia',
+    puntiFatti: 0,
+    falliSubiti: 0,
   },
   {
-    "nome_squadra": 'Juventus',
-    "punti_fatti": 0,
-    "falli_subiti": 0,
+    nomeSquadra: 'Juventus',
+    puntiFatti: 0,
+    falliSubiti: 0,
   }, {
-    "nome_squadra": 'Vicenza',
-    "punti_fatti": 0,
-    "falli_subiti": 0,
+    nomeSquadra: 'Vicenza',
+    puntiFatti: 0,
+    falliSubiti: 0,
   }
 ];
 
-// CHANGE VALUE OF punti_fatti AND falli_subiti FOR EVERY OBJECT IN statsSquadre
+// CHANGE VALUE OF puntiFatti AND falliSubiti FOR EVERY OBJECT IN statsSquadre
 statsSquadre.forEach(function (team) {
-  team.punti_fatti = getRandomInt(10, 60);
-  team.falli_subiti = getRandomInt(1, 110);
+  team.puntiFatti = getRandomInt(10, 60);
+  team.falliSubiti = getRandomInt(1, 110);
 });
 
 // CREATE ARRAY updatedStats 
 const updatedStats = [];
 for (let team of statsSquadre) {
-  let {nome_squadra, falli_subiti} = team;
+  let {nomeSquadra, falliSubiti} = team;
   let updatedValue = {
-    nome_squadra,
-    falli_subiti
+    nomeSquadra,
+    falliSubiti
   };
   updatedStats.push(updatedValue)
 }
 // statsSquadre.forEach(function (item) {
-//   let { nome_squadra, falli_subiti } = item;
+//   let { nomeSquadra, falliSubiti } = item;
 //   updatedStats.push({
-//     nome_squadra,
-//     falli_subiti
+//     nomeSquadra,
+//     falliSubiti
 //   })
 // })
 
-// SORT ITEMS IN updatedStats ACCORDING TO ITEM.falli_subiti (DESCENDING ORDER)
+// SORT ITEMS IN updatedStats ACCORDING TO ITEM.falliSubiti (DESCENDING ORDER)
 updatedStats.sort(function (a, b) { 
-  return b.falli_subiti - a.falli_subiti });
+  return b.falliSubiti - a.falliSubiti });
 
-// PRINT nome_squadra, falli_subiti OF EVERY OBJECT IN updatedStats INTO index.html
+// PRINT nomeSquadra, falliSubiti OF EVERY OBJECT IN updatedStats INTO index.html
 let rankList = '';
 
 for (let i of updatedStats) {
-  rankList += `<li>${i.nome_squadra}: ${i.falli_subiti}</li>`;
+  rankList += `<li>${i.nomeSquadra}: ${i.falliSubiti}</li>`;
 
 }
 RANKS.innerHTML = rankList;
