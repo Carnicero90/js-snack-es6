@@ -83,13 +83,6 @@ for (let team of statsSquadre) {
   };
   updatedStats.push(updatedValue)
 }
-// statsSquadre.forEach(function (item) {
-//   let { nomeSquadra, falliSubiti } = item;
-//   updatedStats.push({
-//     nomeSquadra,
-//     falliSubiti
-//   })
-// })
 
 // SORT ITEMS IN updatedStats ACCORDING TO ITEM.falliSubiti (DESCENDING ORDER)
 updatedStats.sort(function (a, b) { 
